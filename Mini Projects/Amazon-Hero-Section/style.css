@@ -1,0 +1,27 @@
+
+.hero-section{
+    background-image: url("https://neokyo.com/img/shop-introduction/amazon/2x/banner.jpg");
+    height: 500px;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.msg{
+    height: 40px;
+    width: 80%;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1rem
+}
+.msg a{
+    color: #007185;
+    background-color: transparent;
+    text-decoration: none;
+}

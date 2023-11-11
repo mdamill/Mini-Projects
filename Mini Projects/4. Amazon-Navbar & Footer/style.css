@@ -1,0 +1,67 @@
+/* div{
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+} */
+
+.contentBox{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+
+    /* EXTRA */
+    display: inline-block;
+}
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#navbar{
+    height: 60px;
+    /* width: 60px; */
+    background-color: #0f1111;
+}
+
+button{
+    background-color: #f08804;
+
+}
+
+#logo{
+    color: #f08804;
+    font-size: 25px;
+}
+
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center; 
+
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+#content{
+    height: 465px;
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqunc9t7IL6NZ4h2Ce3ug-21gLjPaHo-Ddrw&usqp=CAU");
+    
+    background-size: auto;
+    height: 800px;
+}
+
+#boxes{
+    position: absolute;
+    top: 250px;
+    left: 500px;
+}
