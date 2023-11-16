@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-sizing:border-size;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #52ACFF;
+    background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    height: 32rem;
+    width: 20rem;
+    
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+
+    /* background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+
+
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2rem;
+
+}
+
+.profile-img{
+
+    width: 10rem;
+    height: 10rem;
+
+    background-image: url("https://cdn4.iconfinder.com/data/icons/social-media-and-logos-11/32/Logo_Github-512.png");
+    background-size: cover;
+    border-radius: 50%;
+
+    /* margin: 2rem; */
+    padding: 1rem;
+
+
+}
+
+.media{
+    height: 4rem;
+    width: 15rem;
+    background-color: white;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.media-icon{
+    height: 100%;
+    width: 50%;
+    border-radius: 2rem;
+
+    background-color: mediumturquoise;
+
+    /* background-image: url(""); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+
+}
+.media-link a{
+
+    text-decoration: none;
+    color: black;
+    padding: 1.8rem;
+    font-weight: 700;
+    
+
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+.end-box{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 10px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-box a{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+
+    color: #000000;
+}
