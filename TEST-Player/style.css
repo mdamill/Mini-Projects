@@ -127,3 +127,9 @@ html {
 .del-icon {
   cursor: pointer;
 }
+
+
+.footer svg{
+  color: black;
+
+}
