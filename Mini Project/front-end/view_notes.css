@@ -1,0 +1,28 @@
+.view-notes-header{
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+
+}
+.view-notes-block{
+    width: 350px;
+    /* background-color:rgba(15, 14, 14, 0.318); */
+
+    box-shadow: 0 0 10px 0 #0002;
+    border-radius: 10px;
+    margin:10px auto;
+    padding: 20px;
+    list-style-type: none;
+
+}
+.view-notes-block-list{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.view-notes{
+    color:rgba(11, 231, 58, 0.76);
+}
