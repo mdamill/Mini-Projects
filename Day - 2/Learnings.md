@@ -1,5 +1,5 @@
 
-# 1.COLOR CHNAGER :-
+# 1.COLOR CHANGER :-
 
 - To select all the buttons , we can either use `getElementsByClassName()` : html collection ----> Only for loop , OR
 
@@ -107,4 +107,78 @@ function edgeFunction(bmi) {
   setInterval(logic, 1000);
 
   
+```
+
+# 4. GUESS NUMBER GAME :- [Incomplete .....]
+
+[CHAI-CODE PROJECT-4 :- LINK](https://youtu.be/_TjtAyMkiTI?t=9513)
+
+```js
+
+  
+  let randonNum = parseInt(Math.random() * 100 + 1);
+  const userInput = document.querySelector('#guessField')
+  const form = document.querySelector('form')
+  const guessSlot = document.querySelector('.guesses')
+  const remGuess = document.querySelector('.lastResult')
+  const lowOrHi = document.querySelector('.lowOrHi')
+
+  const guessArray = []
+  let turn = 0
+
+  remGuess.innerHTML = `3`
+
+  let playGame = true
+
+  if(playGame){
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const guess = parseInt(userInput.value)
+      // console.log(guess)
+      validateGuess(guess)
+    })
+  }
+
+  function validateGuess(guess){
+
+    if(isNaN(guess))
+      alert(`Invalid Input`);
+    else if(guess<1 || guess>100)
+      alert(`Enter value within range !`)
+    else{
+      guessArray.push(guess)
+
+      if(turn === 3)
+      {
+        playGame = false;
+        alert(`GAME OVER, REFRESH TO PLAY AGAIN !`)
+      }
+      else{
+
+        valueUpdate(guess)
+
+        // When guess equals to random number 
+        if(guess === randonNum)
+        lowOrHi.innerHTML = `<h2>YOU GUESSED IT !!</h2>`
+        else if(guess < randonNum)
+        lowOrHi.innerHTML = `<h2>Number is LOW</h2>`
+        else if(guess > randonNum)
+        lowOrHi.innerHTML = `<h2>Number is HIGH</h2>`
+      }
+    }
+  }
+
+  function valueUpdate(guess){
+
+    userInput.value = ''
+
+    guessSlot.textContent += `${guess}, `
+
+    turn++;
+
+    remGuess.textContent = `${3 - turn}`
+
+  }
 ```
