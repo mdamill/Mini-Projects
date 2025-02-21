@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            background-color: green;
+            color: white;
+            font-family: 'Martel Sans', sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <div id="output">Initializing Hacking...</div>
+</body>
+
+<script>
+    const messages = [
+    "Initializing Hacking",
+    "Reading your Files",
+    "Password files Detected",
+    "Sending all passwords and personal files to server",
+    "Cleaning up"
+];
+
+const output = document.getElementById("output");
+
+function showMessage(index = 0) {
+    if (index >= messages.length) return;
+
+    let line = document.createElement("div");
+    let spanMessage = document.createElement("span");
+    let spanDots = document.createElement("span"); // Corrected variable name
+
+    spanMessage.textContent = messages[index];
+    line.appendChild(spanMessage);
+    line.appendChild(spanDots);
+    output.appendChild(line);
+
+    // Animate blinking dots
+    let dotCount = 0;
+    let dotInterval = setInterval(() => {
+        dotCount = (dotCount + 1) % 4; // Cycles through "", ".", "..", "..."
+        spanDots.textContent = ".".repeat(dotCount);
+    }, 500);
+
+    setTimeout(() => {
+        clearInterval(dotInterval); // Stop blinking dots
+        
+        spanDots.textContent = ""; // Remove dots
+        showMessage(index + 1);
+    }, Math.random() * 6000 + 1000); // Random delay (1-7 sec)
+}
+
+// Start simulation
+setTimeout(() => {
+    output.innerHTML = "";
+    showMessage();
+}, 1000);
+
+</script>
+
+</html>
